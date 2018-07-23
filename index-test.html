@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Testy</title>
+  <div id='sheet'></div>
+</head>
+<body>
+  Yo
+</body>
+</html>
+<script>
+var emilyDemo = "https://spreadsheets.google.com/feeds/list/1gKqqF2dBXtFe3a0aFS1R_-Ddyah4huASBc6YsDPk-8I/od6/public/values?alt=json"
+
+_GET = (url, callback)=>{
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4) {
+      if (callback) callback(JSON.parse(xhr.responseText))
+    }
+  }
+  xhr.send(null)
+}
+
+_GET(emilyDemo, (data)=>{
+  data = data.feed.entry
+  console.log('data: ', data, data[1].gsx$day.$t);
+  const sheet = document.getElementById("sheet")
+  for (const row of data) {
+    console.log(row.gsx$image.$t)
+    sheet.innerHTML += /*html*/`
+      <h3> 
+        DAY: ${row.gsx$day.$t} &nbsp;
+        &bull; &nbsp; MEAL: ${row.gsx$meal.$t}
+        &bull; &nbsp; Cals: ${row.gsx$cals.$t}
+      </h3>
+      <img src="${row.gsx$image.$t}" alt="Smiley face" height="200" width="200">
+    `
+  }
+
+})
+
+
+
+</script>
+
+<!-- 
+
+Sheets to Json: https://spreadsheets.google.com/feeds/list/<PASTE CODE HERE>/od6/public/values?alt=json
+  
+var bobDemo = "https://spreadsheets.google.com/feeds/list/1y3sqWKW1DwmLR-4HtA1e56rhd8y3rSs1KhtpsCjcFtU/od6/public/values?alt=json"
+
+-->
