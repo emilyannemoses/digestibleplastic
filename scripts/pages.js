@@ -12,9 +12,9 @@ _page = (page)=>{
     alert(`
       So... this "${page.split('-')[1]}" page doesn't exist. 
       It may have in the past, it might in the future, 
-      or it might never exist.
-      What we're gonna do is send you back to the last page you
-      were on. If this was it, we'll send you to the home page.
+      or it might never exist. What we're gonna do is 
+      send you back to the last page you were on. 
+      If this was it, we'll send you to the home page.
     `)
     _page(_oldPage)
   }

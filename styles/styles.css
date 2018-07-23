@@ -30,3 +30,8 @@ a {
 .footer-span {
     text-align: center;
 }
+
+.under-construction {
+    height: 100vh;
+    width: 100vw;
+}
