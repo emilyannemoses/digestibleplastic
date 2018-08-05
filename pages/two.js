@@ -1,4 +1,4 @@
-var ketoData = "https://spreadsheets.google.com/feeds/list/1za1lKiDfcE4lCrkXzSpN970IOOB-dHsXFAIjF5gn_Ms/od6/public/values?alt=json"
+var ketoData = "https://spreadsheets.google.com/feeds/list/1V1Jf2Ec1jqWyPAKjCIJ9ifymUOVMd_etnQR2MZNT_Gs/od6/public/values?alt=json"
 
 _GET = (url, callback)=>{
   var xhr = new XMLHttpRequest();
@@ -18,17 +18,14 @@ _GET(ketoData, (data)=>{
   const _two = document.getElementById("keto")
   for (const row of data) {
     _two.innerHTML += /*html*/`
-    <figure>
-      <figcaption>
-        Date: ${row.gsx$ketoDate}
+    <div>
+      <div>
+        ${row.gsx$ketodate.$t} ${row.gsx$ketotime.$t}
         <br>
-        Time: ${row.gsx$ketoTime}
+        <iframe class="ketoInfo" src="${row.gsx$ketodescription.$t}" allowfullscreen></iframe>
         <br>
-        Description: ${row.gsx$ketoDescription}
-        <br>
-        Links: ${row.gsx$ketoLinks}
-      </figcaption>
-	  </figure>
+      </div>
+	  </div>
     `
   }
 
