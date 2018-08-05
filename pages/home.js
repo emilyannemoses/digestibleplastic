@@ -12,6 +12,8 @@ _GET = (url, callback)=>{
 }
 
 _GET(foodData, (data)=>{
+  console.log(data);
+  
   data = data.feed.entry
   const column = document.getElementById("columns")
   for (const row of data) {
