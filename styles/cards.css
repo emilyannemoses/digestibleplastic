@@ -1,55 +1,35 @@
 #columns {
-	column-width: 400px;
-	column-gap: 15px;
-    width: 90%;
-	max-width: 1100px;
-    margin: 50px auto;
-    height: 100%;
+	column-width: 100vw;
+	column-gap: 0px;
+    width: 90vw;
+    height: auto;
 }
 
-div#columns figure {
+div#columns .figure {
+    display: inline-block;
 	background: #fefefe;
 	border: 2px solid #fcfcfc;
 	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-	margin: 0 2px 15px;
-	padding: 15px;
-	padding-bottom: 10px;
 	transition: opacity .4s ease-in-out;
-    display: inline-block;
     -webkit-column-break-inside: avoid;
+    width: 99vw;
+    margin: auto !important;
+    height: 500px;
 }
 
-div#columns figure img {
-	width: 100%; height: auto;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 15px;
-	margin-bottom: 5px;
+div#columns .figure img {
+    width: 250px; 
+    height: 200px;
 }
 
-div#columns figure figcaption {
+div#columns .figure div {
     font-size: .9rem;
     color: #444;
     line-height: 1.5;
+    height: auto;
+    padding: 20px;
 }
 
-/* div#columns small { 
-    font-size: 1rem;
-    float: right; 
-    text-transform: uppercase;
-    color: #aaa;
-}  */
-
-div#columns small a { 
-  color: #666; 
-  text-decoration: none; 
-  transition: .4s color;
-}
-
-div#columns:hover figure:not(:hover) {
+div#columns:hover .figure:not(:hover) {
 	opacity: 0.4;
-}
-
-@media screen and (max-width: 750px) { 
-  #columns { column-gap: 0px; }
-  #columns figure { width: 100%; }
 }

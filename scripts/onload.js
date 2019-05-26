@@ -5,9 +5,9 @@ window.onload = ()=>{
     _set_year_to_footer(document.getElementById('my-custom-footer'))
   }
   
-  _set_year_to_footer = (footer)=>{
-    const year = new Date
-    footer.innerHTML = /*html*/`
-      <div> &copy; ${year.getFullYear()} <a href="https://github.com/eamoses" target="_blank"> Emily Anne Moses </a> </div>
-    `
-  }  
+_set_year_to_footer = (footer)=>{
+  const year = new Date
+  footer.innerHTML = `
+    <div> &copy; ${year.getFullYear()} <a href="https://github.com/eamoses" target="_blank"> Emily Anne Moses </a> </div>
+  `
+}  

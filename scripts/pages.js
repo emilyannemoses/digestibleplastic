@@ -1,4 +1,4 @@
-var _oldPage = 'home'
+var _oldPage = 'who'
 
 _page = (page)=>{
   const newPage = document.getElementById(page)
@@ -10,11 +10,12 @@ _page = (page)=>{
   }
   catch(error) {
     alert(`
-      So... this "${page.split('-')[1]}" page doesn't exist. 
-      It may have in the past, it might in the future, 
-      or it might never exist. What we're gonna do is 
-      send you back to the last page you were on. 
-      If this was it, we'll send you to the home page.
+      So... this "${page}" page doesn't exist. 😱 
+      
+      It may have in the past, it might in the future
+      ...or it might never exist. 🤷🏽‍♀️
+      
+      We'll send you 🔄 to the last page you were on. 👋🏼 
     `)
     _page(_oldPage)
   }
