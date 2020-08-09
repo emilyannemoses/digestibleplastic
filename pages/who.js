@@ -13,12 +13,12 @@ _GET = (url, callback)=>{
 
 _GET(whoData, (data)=>{
   console.log(data);
-  
+
   data = data.feed.entry
   const column = document.getElementById("columns")
   for (const row of data) {
     column.innerHTML += `
-    <div class="figure">
+    <div class="figure terms">
       <div style="float:left;">
         <h1>${row.gsx$mealdescription.$t}</h1>
         <img src="${row.gsx$imageurl.$t}">

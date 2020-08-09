@@ -1,33 +1,33 @@
 #columns {
 	column-width: 100vw;
 	column-gap: 0px;
-    width: 90vw;
-    height: auto;
+  width: 100vw;
+  height: auto;
 }
 
 div#columns .figure {
-    display: inline-block;
+  display: inline-block;
 	background: #fefefe;
 	border: 2px solid #fcfcfc;
 	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
 	transition: opacity .4s ease-in-out;
-    -webkit-column-break-inside: avoid;
-    width: 99vw;
-    margin: auto !important;
-    height: 500px;
+  -webkit-column-break-inside: avoid;
+  width: 100vw;
+  margin: auto !important;
+  height: 500px;
 }
 
 div#columns .figure img {
-    width: 250px; 
-    height: 200px;
+  width: 250px;
+  height: 200px;
 }
 
 div#columns .figure div {
-    font-size: .9rem;
-    color: #444;
-    line-height: 1.5;
-    height: auto;
-    padding: 20px;
+  font-size: .9rem;
+  color: #444;
+  line-height: 1.5;
+  height: auto;
+  padding: 20px;
 }
 
 div#columns:hover .figure:not(:hover) {

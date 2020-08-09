@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <link rel="stylesheet" type="text/css" href="styles/cards.css">
-    <title>Digestible Plastic</title>
-</head>
-<body>
+  <head>
+      <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" type="text/css" href="styles/styles.css">
+      <link rel="stylesheet" type="text/css" href="styles/cards.css">
+      <title>Digestible Plastic • Lebanese Recipes</title>
+  </head>
+  <body>
     <div class="home-menu">
         <a onclick='_page("who")'>🍸 Mocktail Recipes</a>
         <span class="vertical-rule"></span>
         <a onclick='_page("what")'>🍹 What are mocktails?</a>
         <span class="vertical-rule"></span>
         <a onclick='_page("where")'>🍶 Mocktails in the news</a>
+        <span class="vertical-rule"></span>
+        <a onclick='_page("who")'>🍸 Mocktail Recipes</a>
+        <span class="vertical-rule"></span>
+        <a onclick='_page("what")'>🍹 What are mocktails?</a>
     </div>
-    <div id="who">
-        <div id="columns"></div>
+    <div class="container">
+      <input autocomplete="off" id="search" class="search" type="text" placeholder="Search">
+      <div id="searchTerms" class="searchTerms">
+        <div id="who">
+            <div id="columns"></div>
+        </div>
+      </div>
     </div>
     <div id="what" style="display: none"></div>
     <div id="where" style="display: none"></div>
-    <span class="footer-span"><footer id="my-custom-footer"> &copy; Emily Anne Moses </footer></span>
-</body>
-<script src='scripts/onload.js'></script>
-<script src='scripts/pages.js'></script>
-<script src='pages/who.js'></script>
-<script src='pages/what.js'></script>
-<script src='pages/where.js'></script>
+    <br />
+    <span class="footer-span"><footer id="custom-footer"></footer></span>
+    <br />
+  </body>
+  <script src='scripts/onload.js'></script>
+  <script src='scripts/search.js'></script>
+  <script src='scripts/pages.js'></script>
+  <script src='pages/who.js'></script>
+  <script src='pages/what.js'></script>
+  <script src='pages/where.js'></script>
 </html>
