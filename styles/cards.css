@@ -18,8 +18,10 @@ div#columns .figure {
 }
 
 div#columns .figure img {
-  width: 250px;
-  height: 200px;
+  /* width: 250px;
+  height: 200px; */
+	height: 250px;
+	width: auto;
 }
 
 div#columns .figure div {
@@ -28,6 +30,7 @@ div#columns .figure div {
   line-height: 1.5;
   height: auto;
   padding: 20px;
+	cursor: pointer;
 }
 
 div#columns:hover .figure:not(:hover) {

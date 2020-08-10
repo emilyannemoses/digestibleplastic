@@ -1,4 +1,4 @@
-var _oldPage = 'who'
+var _oldPage = 'recipes'
 
 _page = (page)=>{
   const newPage = document.getElementById(page)
@@ -10,12 +10,12 @@ _page = (page)=>{
   }
   catch(error) {
     alert(`
-      So... this "${page}" page doesn't exist. 😱 
-      
+      So... this "${page}" page doesn't exist. 😱
+
       It may have in the past, it might in the future
       ...or it might never exist. 🤷🏽‍♀️
-      
-      We'll send you 🔄 to the last page you were on. 👋🏼 
+
+      We'll send you 🔄 to the last page you were on. 👋🏼
     `)
     _page(_oldPage)
   }
