@@ -49,15 +49,10 @@ a {
   font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
   font-size: 20px;
 	font-weight: 300;
-  /* height: 40px;
-	width: 400px;
-	font-size: 20px;
-	font-weight: 300;
-	text-align: center; */
   display: block;
   margin: auto;
   width: 60%;
-  border: 1px solid #73AD21;
+  border: 2px solid #73AD21;
   padding: 10px;
   border-radius: 0px;
 }

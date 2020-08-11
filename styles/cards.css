@@ -6,13 +6,12 @@
 }
 
 div#columns .figure {
-  display: inline-block;
 	background-color: rgb(38, 38, 38);
 	transition: opacity .4s ease-in-out;
   -webkit-column-break-inside: avoid;
-  width: 100vw;
-  margin: auto !important;
-  height: auto;
+	display: block;
+	margin: auto;
+	width: 80%;
 }
 
 div#columns .figure img {
@@ -29,6 +28,7 @@ div#columns .figure div {
 }
 
 div#columns .terms div {
+	border: 1px solid #73AD21;
   font-size: .9rem;
   color: #444;
 	background-color: #fefefe;
