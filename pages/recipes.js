@@ -33,6 +33,9 @@ _GET(recipesData, (data)=>{
             <span style="opacity:0;">${row.gsx$tags.$t}</span>
             <br />
             <br />
+            ${row.gsx$amounts.$t}
+            <br />
+            <br />
             ${row.gsx$recipe.$t}
             <br />
           </div>
