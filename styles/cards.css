@@ -7,19 +7,15 @@
 
 div#columns .figure {
   display: inline-block;
-	background: #fefefe;
-	border: 2px solid #fcfcfc;
-	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	background-color: rgb(38, 38, 38);
 	transition: opacity .4s ease-in-out;
   -webkit-column-break-inside: avoid;
   width: 100vw;
   margin: auto !important;
-  height: 500px;
+  height: auto;
 }
 
 div#columns .figure img {
-  /* width: 250px;
-  height: 200px; */
 	height: 250px;
 	width: auto;
 }
@@ -30,7 +26,21 @@ div#columns .figure div {
   line-height: 1.5;
   height: auto;
   padding: 20px;
-	cursor: pointer;
+}
+
+div#columns .terms div {
+  font-size: .9rem;
+  color: #444;
+	background-color: #fefefe;
+  line-height: 1.5;
+  height: auto;
+  padding: 20px;
+}
+
+div#columns .text div {
+  color: #444;
+	background-color: #fefefe;
+	width: 100vw;
 }
 
 div#columns:hover .figure:not(:hover) {

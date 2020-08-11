@@ -23,41 +23,41 @@ a {
   margin-right: 15px;
 }
 
-.title {
+/* .title {
   text-align: center;
-}
+} */
 
 .footer-span {
   text-align: center;
 }
 
-.ketoInfo {
+/* .ketoInfo {
   display: block;
   margin: auto;
   height: 1200px;
   width: 90vw;
-}
+} */
 
-.ifInfo {
+/* .ifInfo {
   display: block;
   margin: auto;
   height: auto;
   width: 90vw;
-}
-
-.centered {
-  text-align: center;
-  font-size: 30px;
-  border-bottom: 1px solid rgb(236, 176, 141);
-  margin-bottom: 20px;
-}
+} */
 
 .search {
   font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
-	height: 40px;
-	width: 100vw;
-	margin: auto;
+  font-size: 20px;
+	font-weight: 300;
+  /* height: 40px;
+	width: 400px;
 	font-size: 20px;
 	font-weight: 300;
-	text-align: center;
+	text-align: center; */
+  display: block;
+  margin: auto;
+  width: 60%;
+  border: 1px solid #73AD21;
+  padding: 10px;
+  border-radius: 0px;
 }
