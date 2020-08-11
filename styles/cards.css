@@ -46,3 +46,10 @@ div#columns .text div {
 div#columns:hover .figure:not(:hover) {
 	opacity: 0.4;
 }
+
+@media screen and (max-width: 864px) {
+	div#columns .figure img {
+		height: 100px;
+		width: auto;
+	}
+}

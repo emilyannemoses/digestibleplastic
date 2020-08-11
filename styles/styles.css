@@ -14,7 +14,6 @@ a {
 .home-menu {
   margin: 20px;
   padding: 15px;
-  /* border: 1px solid rgb(236, 176, 141); */
 }
 
 .vertical-rule {
@@ -23,27 +22,9 @@ a {
   margin-right: 15px;
 }
 
-/* .title {
-  text-align: center;
-} */
-
 .footer-span {
   text-align: center;
 }
-
-/* .ketoInfo {
-  display: block;
-  margin: auto;
-  height: 1200px;
-  width: 90vw;
-} */
-
-/* .ifInfo {
-  display: block;
-  margin: auto;
-  height: auto;
-  width: 90vw;
-} */
 
 .search {
   font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
@@ -55,4 +36,32 @@ a {
   border: 2px solid #73AD21;
   padding: 10px;
   border-radius: 0px;
+}
+
+@media screen and (max-width: 864px) {
+  .home-menu {
+    width: 60%;
+    margin: auto;
+    padding: 15px;
+  }
+  .search {
+    font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    font-size: 10px;
+  	font-weight: 300;
+    display: block;
+    margin: auto;
+    width: 60%;
+    border: 2px solid #73AD21;
+    padding: 3px;
+    border-radius: 0px;
+  }
+}
+
+@media screen and (max-width: 581px) {
+  body {
+    padding-top: 20px;
+  }
+  .home-menu {
+    display: none;
+  }
 }
