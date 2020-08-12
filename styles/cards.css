@@ -20,7 +20,7 @@ div#columns .figure img {
 }
 
 div#columns .figure div {
-  font-size: .9rem;
+  font-size: 1rem;
   color: #444;
   line-height: 1.5;
   height: auto;
@@ -29,7 +29,7 @@ div#columns .figure div {
 
 div#columns .terms div {
 	border: 1px solid #73AD21;
-  font-size: .9rem;
+  font-size: 1rem;
   color: #444;
 	background-color: #fefefe;
   line-height: 1.5;
