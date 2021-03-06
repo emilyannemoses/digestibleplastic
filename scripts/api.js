@@ -1,4 +1,4 @@
-var foodData = "https://spreadsheets.google.com/feeds/list/1rqFwwrr9bbzBVW9Vi6xkKtopggTCDT5igh0BIot-MMU/1/public/values?alt=json"
+var foodData = "https://spreadsheets.google.com/feeds/cells/1rqFwwrr9bbzBVW9Vi6xkKtopggTCDT5igh0BIot-MMU/1/public/full?alt=json"
 
 _GET = (url, callback)=>{
   var xhr = new XMLHttpRequest();
