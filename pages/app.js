@@ -1,7 +1,5 @@
-// const recipesData = "https://spreadsheets.google.com/feeds/cells/1rqFwwrr9bbzBVW9Vi6xkKtopggTCDT5igh0BIot-MMU/od6/public/values?alt=json";
-// const recipesData = "https://spreadsheets.google.com/feeds/cells/1rqFwwrr9bbzBVW9Vi6xkKtopggTCDT5igh0BIot-MMU/1/public/full?alt=json";
 const recipesData =
-{"recipes":[
+[
   [ {"title":"thick hummus (chickpeas and tahini)"},
     {"arabictitle":"الحمص والطحينة"},
     {"image1":"https://lh3.googleusercontent.com/pw/ACtC-3f-_XAohtEWS5UkN6H0EbMeixTnSX9kH5hk5esEalDTgkoO8mCWaTUtwkmjSBLyydabaiAyezXY-UcB7Epi2qesw0a8bflkITRNg6oaFsDYio10GZZ7E17AV0U2a1iy1qJKRLc0MXjuUa8ksQbuUr1oKg=w2042-h1328-no?authuser=0"},
@@ -34,66 +32,32 @@ const recipesData =
     {"ingredients":"1 cup long grain rice | 1 cup vermicelli pasta | 1 tbsp olive oil"},
     {"tags":"vegan vegetarian dairy free nut free lactose free"},
     {"recipe":"1/ Measure out 1 cup of broken pieces of vermicelli pasta and 1 cup long grain white rice.\n\n2/ Put the rice in hot water, stir it up and let it sit for at least 10 minutes.  When the rice is ready, it should break when you squeeze it.\n\n3/ Put a small amount of olive oil [1 tsp or less] into a large pan. It\u0027s better to use a wok or flat cast iron than a tall pot for a more even cook of the rice.\n\n4/ Put the vermicelli in with the olive oil and actively stir it for a few minutes on low heat. Make sure to brown the vermicelli. If it burns, toss it and start over. \n\n5/ Strain the rice and toss it into the browned vermicelli. Add salt to your liking [you can also do this at the end instead] Keep the heat on low-to-medium until the rice and vermicelli are all mixed together.\n\n6/ Add 2 cups of water, covering every piece of rice and vermicelli. Cover the wok or pan. Let this sit and DO NOT STIR for about twenty minutes. Keep the heat low to simmer. Lift the lid every few minutes, to observe the rice absorbing the water. After 20 minutes most of the water should be gone.\n\n7/ Once most of the water is gone, fluff the rice and make sure none of it is sticking to the bottom of the pan. There might be a *small amount* of water left on the bottom - that\u0027s okay. Turn off the heat and uncover the pan and let it sit for 10 more minutes. Most of the water will absorb or burn off during this time.\n\n8/ Eat!  You might need more salt or other spices, so feel free to add them at this time to taste."}]
-]};
+];
 
-const myData = [];
-
-_GET = (url, callback) => {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4) {
-      if (callback) callback(JSON.parse(xhr.responseText))
-    }
-  }
-  xhr.send(null)
-}
-
-_GET(recipesData, (data) => {
-  data = data.feed.entry
-  const column = document.getElementById("columns")
-  const recipe = document.getElementById("recipe")
-  for (var i = 0; i < data.length; i++) {
-    let row = data[i].gs$cell.row;
-    if (!myData[row]) {
-      myData[row] = [];
-    }
-    myData[row].push(data[i].gs$cell.inputValue);
-  }
-  myData.shift();
-  for (const recipes of myData) {
-    let recipe = {
-      title: recipes[0],
-      arabictitle: recipes[1],
-      image1: recipes[2],
-      image2: recipes[3],
-      image3: recipes[4],
-      ingredients: recipes[5],
-      tags: recipes[6],
-      instructions: recipes[7]
-    }
-    column.innerHTML += `
-    <div class="figure">
-      <div class="terms">
-        <div class="text">
-          <span style="font-size:26px;">${recipe.title} • ${recipe.arabictitle}</span>
-          <br />
-        </div>
-        <div class="text">
-          <img src="${recipe.image1}"/>
-          <img src="${recipe.image2}"/>
-          <img src="${recipe.image3}"/>
-        </div>
-        <div class="text">
-          ${recipe.ingredients}
-          <span style="opacity:0;">${recipe.tags}</span>
-          <br />
-          <br />
-          ${recipe.instructions}
-          <br />
-        </div>
+const column = document.getElementById("columns");
+const recipe = document.getElementById("recipe");
+for (let i = 0; i < recipesData.length; i++) {
+  column.innerHTML += `
+  <div class="figure">
+    <div class="terms">
+      <div class="text">
+        <span style="font-size:26px;">${recipesData[i][0].title} • ${recipesData[i][1].arabictitle}</span>
+        <br />
+      </div>
+      <div class="text">
+        <img src="${recipesData[i][2].image1}"/>
+        <img src="${recipesData[i][3].image2}"/>
+        <img src="${recipesData[i][4].image3}"/>
+      </div>
+      <div class="text">
+        ${recipesData[i][5].ingredients}
+        <span style="opacity:0;">${recipesData[i][6].tags}</span>
+        <br />
+        <br />
+        ${recipesData[i][7].recipe}
+        <br />
       </div>
     </div>
-    `;
-  }
-})
+  </div>
+  `;
+}
